@@ -1,0 +1,203 @@
+/*REGLAS PARA EL CUERPO DE LA PAGINA WEB*/
+body{
+    margin: 0; /*Porque el body trae un margin por defecto*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*requisito para pedirle al footer que se coloque debajo del body*/
+    background-color:  #220526;
+    font-family: 'Nunito', sans-serif; /*Fuente Nunito*/
+    font-weight: 800; /* Establecer el peso de la fuente a semi-bold */
+}
+
+#contenedor-juego{
+    margin-left: auto;
+    margin-right: auto;
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#icono-ayuda{
+    position: absolute;
+    top:10.5%;
+    left:95%;
+    border-radius: 50%;
+    box-shadow: 0 0 20px aqua; /* Difuminado */
+    z-index: 3;
+    cursor: pointer;
+}
+
+
+#juego{
+    border-radius: 20px;
+    width: 100%;
+
+    border: 5px solid #69396F;
+
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3); /* Sombra blanca tipo neón */
+}
+
+#titulo-juego{
+    
+    width: fit-content;
+    color: aqua;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    font-size: 3rem;
+    text-shadow: 4px 4px 10px aqua; /* Difuminado */
+   
+}
+
+#breadcrumb{
+    color:white;
+    margin-top: 5vh;
+}
+
+#overlay {
+    position: fixed; /* Para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Color oscuro con opacidad */
+    backdrop-filter: blur(5px); /* Efecto de desenfoque */
+    z-index: 4; /* Colocarlo por detrás del div de instrucciones */
+    display: none; /* Ocultar por defecto */
+}
+
+
+#instrucciones-juego, #reseña-historica,
+#galeria-imagenes{
+
+    border-radius: 20px;
+    border: 15px groove #250928;
+    background-color: #b167bb;
+    z-index: 5; /* Mayor que el overlay */
+    position: absolute;
+    top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+    padding: 4%;
+    opacity: 0;
+    visibility: hidden; /* No interactuable */
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transición suave */
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3); /* Sombra blanca tipo neón */
+}
+
+#instrucciones-juego.show, #reseña-historica.show, #galeria-imagenes.show {
+    opacity: 1; /* Visible */
+    visibility: visible; /* Interactuable */
+    width: 50%;
+}
+
+#instrucciones-juego h1,
+#reseña-historica h1,
+#galeria-imagenes h1{
+    font-style: italic;
+    color:#03654B;
+
+}
+
+#instrucciones-juego #parrafo-instrucciones,
+#reseña-historica #parrafo-reseña{
+    font-size: 20px;
+    color:#220526;   
+
+}
+
+#parrafo-flechas{
+    font-size: 18px;
+    color: #7DFFDD;
+}
+
+.cerrar {
+    position: absolute; /* Para que esté en la esquina */
+    top: 10px;
+    right: 10px;
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    font-size: 20px; /* Ajusta el tamaño */
+    cursor: pointer; /* Cursor tipo mano */
+}
+
+#galeria-imagenes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+#galeria-imagenes h1{
+
+text-align: center;
+text-shadow: 10px 10px 30px #19071c;
+}   
+
+#galeria-imagenes #foto-galeria{
+    max-width: 100%; /* La imagen no será más ancha que el contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border: 5px solid grey;
+    border-radius: 20px;
+    opacity: 0.8;
+    position: relative;
+    box-shadow: 10px 10px 30px #19071c;
+    transition: opacity 0.5s ease; /* Transición suave para la opacidad */
+}
+
+/********************************CHAT*************************************/
+#chat{
+    border-radius: 20px;
+    max-width: 100%;
+    border: 5px solid #69396F;
+    margin-top: 3vh;
+    padding: 3%;
+    background-color: #D5B9D9;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.3); /* Sombra blanca tipo neón */
+}
+
+#titulo-comentario{
+    font-size: 2rem;
+    color: #b167bb;
+    
+}
+
+#espacio-escritura{
+    background-color: #F3DDF6;
+    border-radius: 20px;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+#span-escribe-aqui{
+    color: #A072A6;
+    font-size: 1.3rem;
+}
+
+.nombre-usuario{
+    font-size: 1.5rem;
+    color:#220526;
+}
+
+#btn-enviar-comentario{
+    background-color: #69396F;
+    color: white;
+    width: 88px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-style: Nunito;
+    font-size: 14px;
+}
+
+.parrafo-comentario{
+    color: #69396F;
+}

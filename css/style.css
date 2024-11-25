@@ -1,0 +1,508 @@
+/*REGLAS PARA EL CUERPO DE LA PAGINA WEB*/
+body{
+    margin: 0; /*Porque el body trae un margin por defecto*/
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /*requisito para pedirle al footer que se coloque debajo del body*/
+    /*width: 100vw;*/
+    background-color:  #220526;
+    font-family: 'Nunito', sans-serif; /*Fuente Nunito*/
+    font-weight: 800; /* Establecer el peso de la fuente a semi-bold */
+}
+
+a{
+    text-decoration: none;
+}
+
+/******************************************************************************/
+/*******************************HEADER*****************************************/
+/******************************************************************************/
+/*HEADER*/
+#cabecera{
+    /*width: 100%; /* Aproximadamente 1440px*/
+    min-height: 13vh; 
+    background-color: #48154F;
+    display: flex;
+    
+    justify-content: space-between;
+    align-items:center ;
+    
+}
+
+/*CONTENEDOR LOGO HAMBURGUESA Y LOGO DE ATARI*/
+#contenedor-hamburguesa-atari{
+    width: 14vw; /*Este ancho me permite separar el menú hamburguesa del logo*/
+    justify-content: space-between;
+    margin-left: 2vw;
+    display: flex;
+    align-items:flex-start;
+    
+}
+
+/*************FUNCIONALIDAD Y ESTETICA DEL BOTON MENU HAMBURGUESA (= x)****************/
+
+.bars__menu{
+    /*width: 30px;
+    height: 30px;
+    position: absolute;*/
+    display: flex;
+    flex-direction: column;
+    min-width: 50px;
+    height: auto;
+    border:0;
+    background: transparent;
+    cursor: pointer;
+    
+}
+
+.line{
+    width: 70%;
+    height: 5px;
+    border: 1px solid #b167bb;
+    background: linear-gradient(to right, #b6b7b9, #0d3ba7); 
+    margin-top: 6px;
+    transform-origin: 0px 100%;
+    border-radius: 1px;
+    transition: all .6s ;
+}
+
+.active_line1{
+    transform: rotate(45deg) translate(0px, 1px);
+    
+}
+
+.active_line2{
+    opacity: 0;
+    margin-left: -30px;
+}
+
+.active_line3{
+    transform: rotate(-45deg) translate(0px, 1px);
+}
+
+/****************************************************************/
+#icono-menu{
+
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    height: auto;
+    border:0;
+    background: transparent;
+    cursor: pointer;
+
+}
+
+/*IMAGEN BLANCA DE ATARI*/
+#img-atari{
+    height: 6vh;
+    width: 21vw;
+    width: auto ;  
+    cursor: pointer;
+}
+
+/*CONTENEDOR DEL NOMBRE DE USUARIO Y FOTO DEL USUARIO SOBRE LA DERECHA */
+#contenedor-usuario{
+    display: flex;
+    align-items:center ;
+    margin-right: 2vw;
+}
+
+/*IMAGEN DEL USUARIO*/
+#img-usuario{
+    height: 50px ;
+    width: auto;
+    cursor: pointer;  
+}
+
+/*NOMBRE DEL USUARIO LOGUEADO "USUARIO"*/
+#nombre-usuario{
+    color:white;
+    font-weight: 800;
+    margin-right: 1vw; /*Para que el nombre no quede pegado al icono del usuario*/
+}
+
+/*CONTENEDOR DE LA BARRA DE BUSQUEDA E IMAGEN DE LUPA*/
+#contenedor-barra-busqueda{
+    height: 55px ;
+       
+}
+
+/*IMAGEN DE LA LUPA*/
+#img-lupa{
+    height: 40px;
+    
+}
+
+/*BARRA DE BUSQUEDA*/
+#input-busqueda{
+    width: 25vw;
+    height: 50px ;
+    border: none; /* Elimina el borde */
+    outline: none; /* Elimina el contorno que aparece al hacer clic */
+    background-color: #69396F;
+    border-radius: 30px;
+    text-align: center; /* Centra el texto dentro del input */
+    font-weight: 800;
+}
+
+/*REGLAS PARA LA FRASE "¿A QUE JUGAMOS?" DE LA BARRA DE BÚSQUEDA*/
+input::placeholder {
+    color: #D5B9D9; /* Cambia al color #D5B9D9 */
+    opacity: 1; /* controla la opacidad */
+    font-size: 15px; /* Ajusta el tamaño de la letra */
+}
+
+#contenedor-barra-busqueda {
+    position: relative; /* Necesario para posicionar la lupa */
+    
+}
+
+
+#img-lupa {
+    position: absolute; /* Posiciona la lupa de manera absoluta */
+    top: 50%; /* Centra verticalmente */
+    right: 10px; /* Coloca la lupa a la derecha */
+    transform: translateY(-50%); /* Ajusta la posición verticalmente */
+    /*pointer-events: none; /* Opcional: evita que la lupa capture clics */
+    cursor: pointer;
+}
+
+/******************************************************************************/
+/**************************CENTRO DE LA PAGINA*********************************/
+/******************************************************************************/
+
+#contenedor-central{
+    min-height: 100vh;
+    padding-bottom: 40px;
+    padding-top: 10px;
+    display: flex;
+    position: relative;
+}
+
+/**************************BARRA MENU LATERAL**********************************/
+.icono-menu-lateral{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.palabra-menu-lateral{
+    color:white;
+    font-size: 18px;
+    margin-left:2vw;
+    cursor: pointer;
+}
+
+.active-palabra{
+    display: block; /* Mostrar cuando se activa */
+}
+
+.sidebar-contraido{
+    width: 45px;
+}
+
+.sidebar-expandido{
+    width: 190px;
+}
+
+.ocultado{
+    display: none;
+}
+
+
+.lista-sidebar{
+    background-color: #220526;
+    list-style: none;
+    /*width: 50px;*/
+    margin-left: 1.5vw;
+    padding-left: 0;/*Para que las li no tengan padding en el ul*/
+    border-radius: 15px;
+    overflow: hidden; /* Oculta el contenido que sobresale */
+    transition: width 0.5s ease; /* Transición suave */
+    position: absolute; /* Permite usar transform */
+    z-index: 4;
+    /*box-shadow: [desplazamiento horizontal] [desplazamiento vertical]
+     [difuminado] [expansión] [color];*/
+    box-shadow: 10px 10px 30px #19071c;
+    
+}
+
+
+.lista-sidebar li{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 8vh;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Añadir transición */
+    padding: 0 10px; 
+}
+
+.lista-sidebar li:hover{
+    background-color:  #48154F;
+   
+}
+
+.lista-sidebar li a{
+    text-decoration: none;
+}
+
+/************************VENTANITA INICIAR SESION Y SALIR**********************/
+
+#inicio-sesion-salir{
+    position: absolute;
+    z-index: 2;
+    background-color:#48154F;
+    border-radius: 5px;
+    right: 4vw; /* Alineado al margen derecho */
+    top: 8vh; /* Centrado verticalmente */
+    transform: translateY(-50%); /* Ajuste para centrar */
+    list-style: none;
+    
+    padding: 0; /* Elimina el padding predeterminado */
+    height: 20vh;
+    width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    display: none;
+}
+
+
+
+.imagen-inicio-sesion-salir{
+    height: 35px;
+    width:  35px;
+}
+
+.palabra-inicio-sesion-salir{
+    color: white;
+    font-size: 18px;
+    margin-left: 1vw;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+#inicio-sesion-salir li{
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    height: 8vh;
+    padding: 4%;
+    transition: background-color 0.3s ease;
+}
+
+#inicio-sesion-salir li:hover{
+    background-color: #69396F;
+}
+
+/******************************************************************************/
+#carruseles{
+    /*padding-top: 89px;*/
+    padding-left: 28px;
+    margin-left: 3.5vw;
+}
+
+
+/******************************************************************************/
+/*******************************FOOTER*****************************************/
+/******************************************************************************/
+
+/*FOOTER*/
+#pie{
+    min-height: 50vh;
+    width: auto;
+    background-color: #69396F;
+    margin-bottom: 0;
+}
+
+#linea-blanca{
+    width: auto;
+    height: 1px; /* Ajusta el grosor de la línea */
+    background-color: white; /* Color de la línea */
+    margin-top: 50px; /* Espacio desde la parte superior del footer */
+}
+
+#contenedor-columnas-footer{
+    margin-top: 10vh; /*Bajo un 10% de view port las columnas con texto*/
+    display: flex; /*Para que todas las columnas esten una al lado de la otra*/
+    justify-content:space-evenly; /*distribuyo de manera uniforme las columnas*/
+    /*width: 90vw;/*  Achicando el contenedor, traigo las columnas hacia la izquierda*/
+}
+
+#img-atari-footer{
+    height: 85px;/*tamaño del logo en el footer*/
+}
+
+/*columna con todas las imagenes de las redes y su nombre al lado*/
+#contenedor-redes-footer{
+display: flex;
+flex-direction: column;
+}
+
+/*contenedor de la red con su nombre*/
+#contenedor-red-individual{
+display: flex;
+align-items: center;
+}
+
+/*imagen de cada red social*/
+.redes-footer{
+    height: 20px;
+    width: 20px;
+    margin:8px;
+}
+
+
+h5{
+    color: white;
+}
+
+.nombre-redes{
+    color: white;
+}
+
+.palabra-footer{
+    color: white;
+    margin-top: 1vh;
+    font-size: small;
+}
+
+.contenedor-columna-individual-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.titulo-columna-footer{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.card-vertical-mobile{
+    display: none;
+}
+/**********************************MEDIA QUERIES*****************************************/
+
+
+/* Media query para pantallas pequeñas (móviles) */
+@media only screen and (max-width: 600px) {
+
+    #cabecera{
+        width: 100%; /* Aproximadamente 1440px*/
+        min-height: 13vh; 
+        background-color: #48154F;
+        display: flex;
+        
+        /*justify-content: space-between;*/
+        align-items:center ;
+        
+    }
+    
+/*CONTENEDOR DE LA BARRA DE BUSQUEDA E IMAGEN DE LUPA*/
+#contenedor-barra-busqueda{
+    height: 55px ;
+       display: none;
+}
+    
+#inicio-sesion-salir{
+
+    top:8vh;
+
+
+
+}
+/*FOOTER*/
+#pie{
+    min-height: 50vh;
+    width: 100%;
+    background-color: #69396F;
+}
+
+#footer-explore, #footer-visit, #footer-legal{
+    display: none;
+}
+
+#contenedor-redes-footer{
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+    scale: 0.8;
+}
+
+
+
+
+#img-atari-footer{
+    scale: 1.1;
+
+}
+
+.card, .card2, .card3, .card4{
+    min-width: 70%;
+}
+
+#card1-vertical, #card2-vertical, #card3-vertical{
+    min-width: 90%;
+    height: auto;
+   
+}
+
+#card1-vertical-mobile{
+    min-width: 90%;
+    height: auto;
+    display: block;
+}
+
+/*
+#card2-vertical, #card3-vertical{
+    display: none;
+}
+*/
+
+#card1-vertical-mobile{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/*****************************************************************************/
+.card-vertical{
+    display: none;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+
+
+
+/**************************************************************************/
+#contenedor-central{
+    padding-bottom: 0;
+}
+#contenedor-columnas-footer{
+flex-direction:column;
+align-items: center;
+margin-top: 30px;
+}
+
+#contenedor-hamburguesa-atari{
+    margin-left: 5%;
+}
+
+#contenedor-usuario{
+    margin-right: 3%;
+}
+
+
+
+
+}
+/***************FIN MEDIA QUERIE*******************/
+

@@ -1,0 +1,80 @@
+:root{
+    --x: 45deg;
+}
+/***********************************************************/
+/********UBICACION DE LOS BOTONES DEL 4 EN LINEA************/
+
+#btn-ayuda{
+    top:10.5%;
+    left: 87%;
+    z-index: 1;
+}
+
+#btn-reseña{
+    top:16%;
+    left: 87%;
+
+}
+
+#btn-galeria{
+    top:21.5%;
+    left: 87%;
+}
+
+/**********************************************************/
+/**********************************************************/
+.btn-hover-4enlinea{
+    position: absolute;
+   
+    width: 150px;
+    height: 55px;
+    display: inline-block;
+    border-radius: 20px;
+    
+    cursor: pointer;
+}
+.btn-hover-4enlinea i{
+    position: absolute;
+    inset: -2px;
+    display: block;
+    border-radius: 20px;
+}
+
+.btn-hover-4enlinea i,
+.btn-hover-4enlinea i:nth-child(2){
+    background: linear-gradient(var(--x), #7DFFDD, #12D4A2, #BCABFF, #A072A6);
+}
+
+.btn-hover-4enlinea i:nth-child(2){
+    filter: blur(10px);
+}
+
+.btn-hover-4enlinea span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    border: 1px solid #040a29;
+    border-radius: 20px;
+    background-color: rgba(14, 21, 53, 0.65);
+    overflow: hidden;
+}
+
+.btn-hover-4enlinea span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.075);
+    transform: skew(25deg);
+}
+

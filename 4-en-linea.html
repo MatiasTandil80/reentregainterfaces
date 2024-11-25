@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/4-en-linea.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/4-en-linea.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="btn-prueba2/btn-hover.css">
+    <link rel="stylesheet" href="btn-prueba3/btn-hover3.css">
+    <link rel="stylesheet" href="css/style_4_en_linea.css">
+
+    <title>Document</title>
+</head>
+<body>
+        
+    <!--BARRA HEADER--------------------------------------------------------------------->
+    
+    <header id="cabecera">
+
+        <!--CONTENEDOR DE IMAGEN HAMBURGUESA Y LOGO ATARI-->
+        <div id="contenedor-hamburguesa-atari">
+            <div class="bars__menu">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+            </div>
+            <a href="index.html">
+                <img id="img-atari" src="images/header/img-atari.png" alt="atari">
+            </a>
+        </div>
+
+        <!-- CONTENEDOR DE BARRA DE BUSQUEDA E IMAGEN DE LUPA-->
+        <div id="contenedor-barra-busqueda">
+            <input id="input-busqueda" type="text" name="" placeholder="¿ A que Jugamos ?">
+            <img id="img-lupa" src="images/header/img-lupa.png" alt="lupa">
+        </div>
+
+        <!-- CONTENEDOR DE NOMBRE USUARIO E IMAGEN DE USUARIO-->
+        <div id="contenedor-usuario">
+            <h3 id="nombre-usuario">Usuario</h3>
+            <img id="img-usuario" src="images/header/img-usuario.png" alt="usuario">
+        </div>
+
+    </header>
+
+    <!--CENTRO DE LA PAGINA-------------------------------------------------------------->
+    
+    <div id="contenedor-central">
+
+        <ul id="inicio-sesion-salir">
+            <li >
+                <img class="imagen-inicio-sesion-salir" src="images/login/icono-inicio.png" alt="">
+                <a href="login.html" class="palabra-inicio-sesion-salir">Iniciar Sesión</a>
+            </li>
+            <li>
+                <img class="imagen-inicio-sesion-salir" src="images/login/icono-salir.png" alt="">
+                <a class="palabra-inicio-sesion-salir">Salir</a>
+            </li>
+        </ul>
+
+        <!--MENÚ LATERAL DEPLEGABLE DESKTOP-->
+        <ul id="id-sidebar" class="lista-sidebar">
+            <li>
+                <a href="index.html">
+                    <img class="icono-menu-lateral" src="images/menu-lateral/icono-home.png" alt="">
+                </a>
+                <a href="index.html" class="palabra-menu-lateral">Home</a>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-espada.png" alt="">
+                <span class="palabra-menu-lateral">Espada</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-moto.png" alt="">
+                <span class="palabra-menu-lateral">Moto</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-f1.png" alt="">
+                <span class="palabra-menu-lateral">F1</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-ping-pong.png" alt="">
+                <span class="palabra-menu-lateral">Tenis</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-ajedrez.png" alt="">
+                <span class="palabra-menu-lateral">Ajedrez</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-free.png" alt="">
+                <span class="palabra-menu-lateral">Free</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-fantasma.png" alt="">
+                <span class="palabra-menu-lateral">Fantasma</span>
+            </li>
+        </ul>
+
+        <div id="contenedor-juego">    
+            <span id="breadcrumb">Mis Juegos-> Estrategia-> 4 en Línea</span>
+            <span id="titulo-juego">IOS Vs Android</span>
+            <!--<img id="juego" src="images/4-en-linea/juego.png" alt="">-->
+
+            <canvas id="idCanvas" width="1630" height="900" style="border:5px solid black;"></canvas>
+
+            <h2 id="titulo-seleccionar">Seleccionar</h2>
+
+            <!--<h2 id="id-start">Start</h2>-->
+
+            <h2 id="id-lineas" class="subtitulos">Numero de Lineas</h2>
+
+            <h2 id="id-alias-android" class="subtitulos">Alias Android</h2>
+
+            <h2 id="id-alias-apple" class="subtitulos">Alias Apple</h2>
+
+            <h2 id="id-fichas-android" class="subtitulos">Fichas Android</h2>
+
+            <h2 id="id-fichas-apple" class="subtitulos">Fichas Apple</h2>
+
+
+            <input type="text" id="input-alias-android" placeholder="Alias Jugador 1">
+
+            <input type="text" id="input-alias-apple" placeholder="Alias Jugador 1">
+
+
+            <a id="btn-ayuda"   class="btn-hover-4enlinea"><i></i><i></i><span>Ayuda</span></a>
+            <a id="btn-reseña"   class="btn-hover-4enlinea"><i></i><i></i><span>Reseña</span></a> 
+            <a id="btn-galeria"   class="btn-hover-4enlinea"><i></i><i></i><span>Galeria</span></a>
+
+            <div id="overlay"></div>
+            <!--CUADRO INSTRUCCIONES DE JUEGO-->
+            <div id="instrucciones-juego">
+                <button id="btn-cerrar" class="cerrar">X</button>
+                <h1>Instrucciones:</h1>
+                <p id="parrafo-instrucciones">Se juega siempre entre 2 jugadores y sobre un tablero de 7x7 casillas. En cada turno cada jugador coloca una ficha de su color en una columna y esta cae hasta la primera casilla disponible. El que consigue ubicar 4 fichas del mismo color seguidas en horizontal, vertical u oblicuo gana. Si nadie lo consigue la partida termina en empate.</p>
+                <p id="parrafo-flechas">Utilice las flechas para colocar la ficha. Luego presione Enter y espere a que el oponente realice su jugada.</p>
+            </div>
+
+            <!--CUADRO RESEÑA  HISTORICA-->
+            <div id="reseña-historica">
+                <button id="btn-cerrar-reseña" class="cerrar">X</button>
+                <h1>Reseña Histórica de 4 en Línea:</h1>
+                <p id="parrafo-reseña">
+                    4 en línea, también conocido como "Conecta 4", es un juego de mesa de estrategia que ha entretenido a jugadores de todas las edades desde su creación. Su origen se remonta a la década de 1970, cuando fue desarrollado por la empresa canadiense de juguetes Milton Bradley. El juego fue lanzado oficialmente en 1974 y rápidamente ganó popularidad debido a su sencillo concepto y accesibilidad.
+                    La mecánica del juego es simple: dos jugadores se turnan para insertar fichas de su color en una cuadrícula vertical. El objetivo es ser el primero en alinear cuatro fichas en línea, ya sea horizontal, vertical o diagonalmente. Aunque la premisa es sencilla, el juego involucra una profunda estrategia y planificación, lo que lo convierte en un reto tanto para niños como para adultos.
+                    Con el paso de los años, 4 en línea ha sido adaptado a diversas plataformas, incluyendo versiones digitales y aplicaciones móviles, lo que ha ampliado su alcance y atractivo. Además, ha inspirado una variedad de variantes y juegos similares, consolidándose como un clásico en la cultura de los juegos de mesa.
+                    Hoy en día, 4 en línea sigue siendo un juego popular en reuniones familiares, competencias escolares y encuentros de amigos, reafirmando su estatus como un favorito atemporal en el mundo del entretenimiento.
+                </p>
+            </div>
+
+            <!--GALERIA DE IMAGENES-->
+            <div id="galeria-imagenes">
+                <button id="btn-cerrar-galeria" class="cerrar">X</button>
+                <h1>IOS Vs Android</h1>
+                <img id="foto-galeria" src="./images/galeria/1.jpg" alt="IOS Vs Android">
+            </div>
+
+
+            <!--CUADRO DE CHAT-->
+            <div id="chat">
+                <span id="titulo-comentario">Comentario</span>
+                <!--ESPACIO DONDE SE ESCRIBE Y BOTÓN DE ENVIAR COMENTARIO-->
+                <div id="espacio-escritura">
+                    <span id="span-escribe-aqui">Escribe aquí tu comentario...</span>
+                    
+                    
+                <!--<button id="btn-enviar-comentario">Enviar</button>-->
+
+                    <!--BOTON ENVIAR CON HOVER-->
+                    <button class="btn-hover3">Enviar</button>
+
+                </div>
+                <!--DIALOGOS-->
+                <span class="nombre-usuario">Pepe: </span>
+                <p class="parrafo-comentario">“Android es el padre de los cuelgues”. 
+                     Yo ya moví una ficha,
+                     dí cuatro vueltas “manzana” y todavía nada... 
+                     ¿Estas con un telefono o con un trapo haciendo señales de humo? 
+                     ¡Avisame donde queda la tribu!
+                </p>
+                
+                <span class="nombre-usuario">Juan: </span>
+                <p class="parrafo-comentario">
+                    “¡Callate que esa manzana parece de oferta!” 
+                    ¡Seguro aprovechaste la promo de alguna frutería!
+                </p>
+
+                <span class="nombre-usuario">Pepe: </span>
+                <p class="parrafo-comentario">
+                    “¿Cómo va la toldería? ¿Hay pique en el río? 
+                    ¡Avisale a tu cacique que te compre un teléfono!”
+                </p>
+
+            </div>
+        </div> 
+    </div>
+
+    <!--FOOTER--------------------------------------------------------------------------->
+    
+    <footer id="pie">
+        <!--LINEA BLANCA-->
+        <div id="linea-blanca"></div>
+        <!--DIV QUE CONTIENE LOGO ATARI Y LAS OTRAS 4 COLUMNAS-->
+        <div id="contenedor-columnas-footer">
+                <!--LOGO ATARI-->
+                <img id="img-atari-footer" src="images/footer/img-atari-footer.png" alt="img-atari-footer">
+                <!--PARRAFO EXPLORE-->
+                <div class="contenedor-columna-individual-footer">
+                    <h2 class="titulo-columna-footer">Explore</h2>
+                    <span class="palabra-footer">Inicio</span>
+                    <span class="palabra-footer">Registro</span>
+                </div>
+                <!--PARRAFO VISIT-->
+                <div class="contenedor-columna-individual-footer">
+                    <h2 class="titulo-columna-footer">Visit</h2>
+                    <span class="palabra-footer">Portugal 821 Casa 6</span>
+                    <span class="palabra-footer">Tandil, Buenos Aires</span>
+                </div>
+                    
+                <!--PARRAFO FOLLOW-->
+                <div id="contenedor-redes-footer">
+                    <h2 class="titulo-columna-footer">Follow</h2>
+                    <div id="contenedor-red-individual">
+                        <img class="redes-footer" src="images/footer/img-instagram.png" alt="">
+                        <span class="nombre-redes">Instagram</span>
+                    </div>
+                    <div id="contenedor-red-individual">
+                        <img class="redes-footer" src="images/footer/img-tik-tok.png" alt="">
+                        <span class="nombre-redes">Tik-Tok</span>
+                    </div>
+                    <div id="contenedor-red-individual">
+                        <img class="redes-footer" src="images/footer/img-whatsapp.png" alt="">
+                        <span class="nombre-redes">Whatsapp</span>
+                    </div>
+                    <div id="contenedor-red-individual">
+                        <img class="redes-footer" src="images/footer/img-x.png" alt="">
+                        <span class="nombre-redes">X</span>
+                    </div>
+                    <div id="contenedor-red-individual">
+                        <img class="redes-footer" src="images/footer/img-facebook.png" alt="facebook">
+                        <span class="nombre-redes">Facebook</span>
+                    </div>
+           
+                </div>
+                <!--PARRAFO LEGAL-->
+                <div class="contenedor-columna-individual-footer">
+                    <h2 class="titulo-columna-footer">Legal</h2>
+                    <span class="palabra-footer">Terminos</span>
+                    <span class="palabra-footer">Legales</span>
+                </div>
+        </div>
+</footer>
+
+
+
+<script src="js/js_4_en_linea/boton.js"></script>
+<script src="js/js_4_en_linea/Timer.js"></script>
+<script src="js/js_4_en_linea/Coordenada.js"></script>
+<script src="js/js_4_en_linea/Ficha.js"></script>
+<script src="js/js_4_en_linea/Casillero.js"></script>
+<script src="js/js_4_en_linea/Tablero.js"></script>
+<script src="js/js_4_en_linea/DisplayJugador.js"></script>
+<script src="js/js_4_en_linea/Juego.js"></script>
+<script src="js/js_4_en_linea/menuJuego.js"></script>
+
+
+
+<script src="./js/btn-hamburguesa.js"></script>
+<script src="./js/sidebar.js"></script>
+<script src="./js/usuario.js"></script>
+<script src="./js/4-en-linea.js"></script>
+<script src="./btn-prueba2/btn-hover.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style-login.css">
+    <link rel="stylesheet" href="css/botones-hover/botones-style-1.css">
+    <title>Login</title>
+</head>
+<body>
+    
+    <div id="logueo">
+        <h2 id="titulo-login">Iniciar Sesión</h2>
+        
+        <div id="contenedor-iconos-login">
+            <img class="icono-login" src="images/login/icono-google.png" alt="">
+            <img class="icono-login" src="images/login/icono-instagram.png" alt="">
+            <img class="icono-login" src="images/login/icono-facebook.png" alt="">
+        </div>
+
+    <form id="contenedor-inputs">
+   
+        <div class="label-input-login">
+            <label for="usuario">Usuario</label>
+            <input class="input-login" type="text" id="usuario" name="usuario">
+        </div>
+
+        <div class="label-input-login">
+            <label for="contrasena">Contraseña</label>
+            <input class="input-login" type="password" id="contrasena" name="contrasena">
+        </div>
+
+
+    <!--<button id="btn-login" type="submit"><a href="index.html">Ingresar</a></button>-->
+    
+        <!--BOTON CON HOVER-->
+        
+        <button id="btn-login" class="btn btn-violeta" type="submit"><a>Ingresar</a></button>
+    </form>     
+
+
+        <div id="contenedor-span-inferior">
+            <span class="span-inferior">¿No eres miembro?</span>
+            <a href="register.html" class="span-inferior" id="span-registrate-aqui">Registrate aquí</a>
+        </div>
+
+    </div>
+   <script src="js/login.js"></script>
+</body>
+</html>

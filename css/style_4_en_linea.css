@@ -1,0 +1,104 @@
+#idCanvas{
+    border-radius: 20px;
+}
+
+input::placeholder{
+    font-size: 30px; /* Tamaño de fuente más grande */
+    padding-left: 10px; /* Espacio interno para que el texto no toque el borde */
+    font-family: 'Nunito', sans-serif; /* Aplicar la fuente Nunito */
+    font-weight: 700; /* Negrita */
+}
+
+#input-alias-android {
+    left: 39%; 
+    top: 27.5%;
+    width: 20%; /* Agregar 'px' para definir la unidad de medida */
+    height: 3%; /* Agregar 'px' para definir la unidad de medida */
+    border: 5px solid #1CA626;
+    background-color: #A69BD2;
+    border-radius: 20px;
+    position: absolute; /* Para poder posicionarlo sobre el canvas */
+    font-size: 30px; /* Tamaño de fuente más grande */
+    padding-left: 20px; /* Espacio interno para que el texto no toque el borde */
+    font-family: 'Nunito', sans-serif; /* Aplicar la fuente Nunito */
+    font-weight: 700; /* Negrita */
+    color:#68386F;
+    /*display: none; /* Oculto por defecto */
+}
+
+#input-alias-apple {
+    left: 71%; 
+    top: 27.5%;
+    width: 20%; /* Agregar 'px' para definir la unidad de medida */
+    height: 3%; /* Agregar 'px' para definir la unidad de medida */
+    border: 5px solid #1486E2;
+    background-color: #A69BD2;
+    border-radius: 20px;
+    position: absolute; /* Para poder posicionarlo sobre el canvas */
+    font-size: 30px; /* Tamaño de fuente más grande */
+    padding-left: 20px; /* Espacio interno para que el texto no toque el borde */
+    font-family: 'Nunito', sans-serif; /* Aplicar la fuente Nunito */
+    font-weight: 700; /* Negrita */
+    color:#68386F;
+    /*display: none; /* Oculto por defecto */
+}
+
+#titulo-seleccionar {
+    position: absolute;
+    left: 630px;
+    top: 120px;
+    color: #665BAA;
+    font-family: 'Nunito', sans-serif; /* Solo la fuente */
+    font-size: 70px;  /* Tamaño de la fuente */
+    font-weight: bold;  /* Peso de la fuente (negrita) */
+}
+
+.subtitulos{
+    position: absolute;
+    font-family: 'Nunito', sans-serif; /* Solo la fuente */
+    font-size: 40px;  /* Tamaño de la fuente */
+    font-weight: bold;  /* Peso de la fuente (negrita) */
+
+}
+
+#id-lineas{
+    top:295px;
+    left:135px;
+    color: #665BAA;
+}
+
+#id-alias-android{
+    top:295px;
+    left:680px;
+    color: #1CA626;
+}
+
+#id-fichas-android{
+    top:510px;
+    left:670px;
+    color: #1CA626;
+}
+
+#id-alias-apple{
+    top:295px;
+    left:1220px;
+    color: #157EE1;
+}
+
+#id-fichas-apple{
+    top:520px;
+    left:1210px;
+    color: #157EE1;
+}
+
+#id-start{
+    position: absolute;
+    left: 1415px;
+    top: 148px;
+    color: #665BAA;
+    font-family: 'Nunito', sans-serif; /* Solo la fuente */
+    font-size: 48px;  /* Tamaño de la fuente */
+    font-weight: bold;  /* Peso de la fuente (negrita) */
+    z-index: 1;
+    background-color: #1486E2;
+}

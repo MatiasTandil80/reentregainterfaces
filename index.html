@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/carrusel.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;1000;1200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HOME</title>
+</head>
+<body>
+    
+    <!--BARRA HEADER--------------------------------------------------------------------->
+    
+    <header id="cabecera">
+
+        <!--CONTENEDOR DE IMAGEN HAMBURGUESA Y LOGO ATARI-->
+        <div id="contenedor-hamburguesa-atari">
+            <div class="bars__menu">
+                <div class="line" id="line1"></div>
+                <div class="line" id="line2"></div>
+                <div class="line" id="line3"></div>
+            </div>
+            <a href="index.html">
+                <img id="img-atari" src="images/header/img-atari.png" alt="atari">
+            </a>
+        </div>
+
+        <!-- CONTENEDOR DE BARRA DE BUSQUEDA E IMAGEN DE LUPA-->
+        <div id="contenedor-barra-busqueda">
+            <input id="input-busqueda" type="text" name="" placeholder="¿ A que Jugamos ?">
+            <img id="img-lupa" src="images/header/img-lupa.png" alt="lupa">
+        </div>
+
+        <!-- CONTENEDOR DE NOMBRE USUARIO E IMAGEN DE USUARIO-->
+        <div id="contenedor-usuario">
+            <h3 id="nombre-usuario">Usuario</h3>
+            <img id="img-usuario" src="images/header/img-usuario.png" alt="usuario">
+        </div>
+
+    </header>
+
+    <!--CENTRO DE LA PAGINA-------------------------------------------------------------->
+    
+    <div id="contenedor-central">
+        
+        <!--CUADRO PARA LOGIN Y SALIR QUE DESPLIEGA DEL ICONO USUARIO-->
+        <ul id="inicio-sesion-salir">
+            <li >
+                <img class="imagen-inicio-sesion-salir" src="images/login/icono-inicio.png" alt="">
+                <a href="login.html" class="palabra-inicio-sesion-salir">Iniciar Sesión</a>
+            </li>
+            <li>
+                <img class="imagen-inicio-sesion-salir" src="images/login/icono-salir.png" alt="">
+                <a class="palabra-inicio-sesion-salir">Salir</a>
+            </li>
+        </ul>
+
+        <!--MENÚ LATERAL DEPLEGABLE DESKTOP-->
+        <ul id="id-sidebar" class="lista-sidebar">
+            <li>
+                <a href="index.html">
+                    <img class="icono-menu-lateral" src="images/menu-lateral/icono-home.png" alt="">
+                </a>
+                <a href="index.html" class="palabra-menu-lateral">Home</a>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-espada.png" alt="">
+                <span class="palabra-menu-lateral">Espada</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-moto.png" alt="">
+                <span class="palabra-menu-lateral">Moto</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-f1.png" alt="">
+                <span class="palabra-menu-lateral">F1</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-ping-pong.png" alt="">
+                <span class="palabra-menu-lateral">Tenis</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-ajedrez.png" alt="">
+                <span class="palabra-menu-lateral">Ajedrez</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-free.png" alt="">
+                <span class="palabra-menu-lateral">Free</span>
+            </li>
+            <li>
+                <img class="icono-menu-lateral" src="images/menu-lateral/icono-fantasma.png" alt="">
+                <span class="palabra-menu-lateral">Fantasma</span>
+            </li>
+        </ul>
+        
+        <!--DIV CON TODOS LOS CARRUSELES-->
+            <div id="carruseles">
+                <span id="nombre-carrusel-1">Los mas jugados</span>
+                <!--CARRUSEL PRIMERA LINEA------------------------->
+                <div class="carrusel-wrapper">
+                    <!--BOTON IZQUIERDO------------------>
+                    <button id="btn-izquierda" class="boton-imagen">
+                        <img src="./images/carrusel/flecha-izquierda.png" alt="boton izquierdo del carrusel" class="imagen">
+                    </button>
+        
+                    <div class="carrusel">
+
+                        <!--CARD1------------------------------------------>
+                        <div id="carta1" class="card">
+                            <img class="imagen-pacman" src="./images/carrusel/img-pacman - copia.jpg" alt="">
+            
+                            <div class="base-card">
+                                <span class="nombre-juego">Pac-Man</span> 
+
+                            <!--   <span class="precio-juego">Gratis</span>-->
+                            </div>
+                            <button class="btn-joystick-grande">
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                            </button>
+                        </div>
+                        <!--CARD2------------------------------------------>
+                        <div class="card">
+                            <img class="imagen-pacman" src="./images/carrusel/img-street.jpg" alt="">
+            
+                            <div class="base-card">
+                                <span class="nombre-juego">Street fighter</span> 
+
+                            <!--   <span class="precio-juego">Gratis</span>-->
+                            </div>
+                            <button class="btn-joystick-grande">
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                            </button>
+                        </div>
+                        <!--CARD3------------------------------------------>
+                        <div class="card">
+                            <img class="imagen-pacman" src="./images/carrusel/Kangaroo.jpg" alt="">
+            
+                            <div class="base-card">
+                                <span class="nombre-juego">Kangaroo</span> 
+
+                            <!--   <span class="precio-juego">Gratis</span>-->
+                            </div>
+                            <button class="btn-joystick-grande">
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                            </button>
+                        </div>
+                        <!--CARD 4------------------------------------------>
+                        <div class="card">
+                            <img class="imagen-pacman" src="./images/carrusel/enduro.jpeg" alt="">
+            
+                            <div class="base-card">
+                                <span class="nombre-juego">Enduro</span> 
+
+                            <!--   <span class="precio-juego">Gratis</span>-->
+                            </div>
+                            <button class="btn-joystick-grande">
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                            </button>
+                        </div>
+                        <!--CARD5------------------------------------------>
+                        <div class="card">
+                            <img class="imagen-pacman" src="./images/carrusel/fatalrum.jpeg" alt="">
+            
+                            <div class="base-card">
+                                <span class="nombre-juego">Fatal Run</span> 
+
+                            <!--   <span class="precio-juego">Gratis</span>-->
+                            </div>
+                            <button class="btn-joystick-grande">
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                            </button>
+                        </div>
+                        <!--CARD6------------------------------------------>
+                        <div class="card">
+                            <img class="imagen-pacman" src="./images/carrusel/galaxian.jpeg" alt="">
+            
+                            <div class="base-card">
+                                <span class="nombre-juego">Galaxian</span> 
+
+                            <!--   <span class="precio-juego">Gratis</span>-->
+                            </div>
+                            <button class="btn-joystick-grande">
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                            </button>
+                        </div>
+
+                        <!--CARD7------------------------------------------>
+                        <div class="card">
+                            <img class="imagen-pacman" src="./images/carrusel/joust.jpeg" alt="">
+            
+                            <div class="base-card">
+                                <span class="nombre-juego">Joust</span> 
+
+                            <!--   <span class="precio-juego">Gratis</span>-->
+                            </div>
+                            <button class="btn-joystick-grande">
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                            </button>
+                        </div>
+                        <!--CARD8------------------------------------------>
+                        <div class="card">
+                            <img class="imagen-pacman" src="./images/carrusel/donkeykong.jpeg" alt="">
+            
+                            <div class="base-card">
+                                <span class="nombre-juego">Donkey Kong</span> 
+
+                            <!--   <span class="precio-juego">Gratis</span>-->
+                            </div>
+                            <button class="btn-joystick-grande">
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                            </button>
+                        </div>
+                        <!--CARD9------------------------------------------>
+                        <div class="card">
+                            <img class="imagen-pacman" src="./images/carrusel/karate.jpeg" alt="">
+            
+                            <div class="base-card">
+                                <span class="nombre-juego">Karate</span> 
+
+                            <!--   <span class="precio-juego">Gratis</span>-->
+                            </div>
+                            <button class="btn-joystick-grande">
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                            </button>
+                        </div>
+                        
+
+
+                    </div><!--fin carrusel-->
+
+                    <!--BOTON DERECHO--------------------->
+                    <button id="btn-derecha" class="boton-imagen">
+                        <img src="./images/carrusel/flecha-derecha.png" alt="boton derecho del carrusel" class="imagen">
+                    </button>
+                </div><!--fin carrusel PRIMERA LINEA-->
+
+                <span id="nombre-carrusel-2">Los mas populares</span>
+                <!----------CARRUSEL SEGUNDA LINEA----------------->
+                <div class="carrusel-wrapper">
+                    <!--BOTON IZQUIERDO------------------>
+                    <button id="btn-izquierda2" class="boton-imagen">
+                        <img src="./images/carrusel/flecha-izquierda.png" alt="boton izquierdo del carrusel" class="imagen">
+                    </button>
+                
+
+                <div class="carrusel2">
+
+                    <!--CARD1------------------------------------------>
+                    <div class="card2">
+                        <a href="4-en-linea.html">
+                        <img class="imagen-pacman" src="./images/carrusel/4-en-linea-carrusel.png" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">4-en-linea</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            
+                                <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                        
+                        </button>
+                    </a>
+                    </div>
+                
+                    <!--CARD2------------------------------------------>
+                    <div class="card2">
+                        <img class="imagen-pacman" src="./images/carrusel/straforce.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Star-Force</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD3------------------------------------------>
+                    <div class="card2">
+                        <img class="imagen-pacman" src="./images/carrusel/1942.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">1942</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD 4------------------------------------------>
+                    <div class="card2">
+                        <img class="imagen-pacman" src="./images/carrusel/wonderboy.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Wonder Boy</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD5------------------------------------------>
+                    <div class="card2">
+                        <img class="imagen-pacman" src="./images/carrusel/commando.png" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Commando</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD6------------------------------------------>
+                    <div class="card2">
+                        <img class="imagen-pacman" src="./images/carrusel/tetris.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Tetris</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                        </button>
+                    </div>
+
+                    <!--CARD7------------------------------------------>
+                    <div class="card2">
+                        <img class="imagen-pacman" src="./images/carrusel/galaga.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Galaga</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD8------------------------------------------>
+                    <div class="card2">
+                        <img class="imagen-pacman" src="./images/carrusel/pitufo.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Pitufo</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD9------------------------------------------>
+                    <div class="card2">
+                        <img class="imagen-pacman" src="./images/carrusel/baseball.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Baseball</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/joystick-grande.png" alt="">
+                        </button>
+                    </div>
+                    
+                </div><!--fin carrusel-->
+
+                <!--BOTON DERECHO--------------------->
+                <button id="btn-derecha2" class="boton-imagen">
+                    <img src="./images/carrusel/flecha-derecha.png" alt="boton derecho del carrusel" class="imagen">
+                </button>
+                </div><!--fin carrusel SEGUNDA LINEA-->
+
+                <span id="nombre-carrusel-3">Adquiridos por ti</span>
+                <!----------CARRUSEL TERCERA LINEA----------------->
+                <div class="carrusel-wrapper">
+                    <!--BOTON IZQUIERDO------------------>
+                    <button id="btn-izquierda3" class="boton-imagen">
+                        <img src="./images/carrusel/flecha-izquierda.png" alt="boton izquierdo del carrusel" class="imagen">
+                    </button>
+                
+
+                <div class="carrusel3">
+
+                    <!--CARD1------------------------------------------>
+                    <div class="card3">
+                        <img class="imagen-pacman" src="./images/carrusel/cabal_1.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Cabal</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/compra.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD2------------------------------------------>
+                    <div class="card3">
+                        <img class="imagen-pacman" src="./images/carrusel/decathlon.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Decathlon</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/compra.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD3------------------------------------------>
+                    <div class="card3">
+                        <img class="imagen-pacman" src="./images/carrusel/doubledragon.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Double Dragon</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/compra.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD 4------------------------------------------>
+                    <div class="card3">
+                        <img class="imagen-pacman" src="./images/carrusel/boxeo.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Boxeo</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/compra.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD5------------------------------------------>
+                    <div class="card3">
+                        <img class="imagen-pacman" src="./images/carrusel/turtlesninja.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Tortugas Ninjas</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/compra.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD6------------------------------------------>
+                    <div class="card3">
+                        <img class="imagen-pacman" src="./images/carrusel/hugo.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Hugo</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/compra.png" alt="">
+                        </button>
+                    </div>
+
+                    <!--CARD7------------------------------------------>
+                    <div class="card3">
+                        <img class="imagen-pacman" src="./images/carrusel/driver.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Driver</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/compra.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD8------------------------------------------>
+                    <div class="card3">
+                        <img class="imagen-pacman" src="./images/carrusel/circus.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Circus</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/compra.png" alt="">
+                        </button>
+                    </div>
+                    <!--CARD9------------------------------------------>
+                    <div class="card3">
+                        <img class="imagen-pacman" src="./images/carrusel/goldenaxe.jpg" alt="">
+
+                        <div class="base-card">
+                            <span class="nombre-juego">Golden Axe</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        <button class="btn-joystick-grande">
+                            <img class="img-joystick-grande" src="./images/carrusel/compra.png" alt="">
+                        </button>
+                    </div>
+
+
+                </div><!--fin carrusel-->
+
+                <!--BOTON DERECHO--------------------->
+                <button id="btn-derecha3" class="boton-imagen">
+                    <img src="./images/carrusel/flecha-derecha.png" alt="boton derecho del carrusel" class="imagen">
+                </button>
+                </div><!--fin carrusel TERCERA LINEA-->
+
+                <!----------CARRUSEL CARTAS VERTICALES DESKTOP------------->
+                <span id="nombre-carrusel-4">Proximos Estrenos</span>
+                <div class="carrusel4">
+
+                    <!--CARD1------------------------------------------>
+                    <div id=card1-vertical class="card4 card-vertical">
+                        <img class="imagen-pacman" src="./images/carrusel/vertical/card-vertical-1.png" alt="">
+        
+                        <div class="base-card">
+                            <span class="nombre-juego">Formula 1</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+
+                    </div>
+                    <!--CARD2------------------------------------------>
+                    <div id=card2-vertical class="card4 card-vertical">
+                        <img class="imagen-pacman" src="./images/carrusel/vertical/card-vertical-2.png" alt="">
+        
+                        <div class="base-card">
+                            <span class="nombre-juego">Jump Man</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+                        
+                    </div>
+                    <!--CARD3------------------------------------------>
+                    <div id=card3-vertical class="card4 card-vertical">
+                        <img class="imagen-pacman" src="./images/carrusel/vertical/card-vertical-3.png" alt="">
+        
+                        <div class="base-card">
+                            <span class="nombre-juego">Invaders</span> 
+
+                        <!--   <span class="precio-juego">Gratis</span>-->
+                        </div>
+
+                    </div>
+
+
+
+                </div><!--fin carrusel CARTAR VERTICALES-->
+
+                <!----------CARRUSEL CARTAS VERTICALES MOBILE------------->
+               
+                <div class="carrusel4">
+
+                    <!--CARD1------------------------------------------>
+                    <div id=card1-vertical-mobile class="card4 card-vertical-mobile">
+                        <img id="imagen-vertical-mobile" class="imagen-pacman" src="./images/carrusel/vertical/card-vertical-1.png" alt="">
+        
+                        <div class="base-card">
+                            <span id="nombre-juego-mobile" class="nombre-juego">Formula 1</span> 
+                        </div>
+                    </div>
+                    
+
+                </div><!--fin carrusel CARTAR VERTICALES-->
+            
+            </div>   <!--FIN CARRUSELES-->
+
+
+    </div><!--fin contenedor central-->
+</div>
+
+    
+    <!--FOOTER--------------------------------------------------------------------------->
+    
+    <footer id="pie">
+            <!--LINEA BLANCA-->
+            <div id="linea-blanca"></div>
+            <!--DIV QUE CONTIENE LOGO ATARI Y LAS OTRAS 4 COLUMNAS-->
+            <div id="contenedor-columnas-footer">
+                    <!--LOGO ATARI-->
+                    <img id="img-atari-footer" src="images/footer/img-atari-footer.png" alt="img-atari-footer">
+                    <!--PARRAFO EXPLORE-->
+                    <div id="footer-explore" class="contenedor-columna-individual-footer">
+                        <h2 class="titulo-columna-footer">Explore</h2>
+                        <span class="palabra-footer">Inicio</span>
+                        <span class="palabra-footer">Registro</span>
+                    </div>
+                    <!--PARRAFO VISIT-->
+                    <div id="footer-visit" class="contenedor-columna-individual-footer">
+                        <h2 class="titulo-columna-footer">Visit</h2>
+                        <span class="palabra-footer">Portugal 821 Casa 6</span>
+                        <span class="palabra-footer">Tandil, Buenos Aires</span>
+                    </div>
+                        
+                    <!--PARRAFO FOLLOW-->
+                    <div id="contenedor-redes-footer">
+                        <h2 class="titulo-columna-footer">Follow</h2>
+                        <div id="contenedor-red-individual">
+                            <img class="redes-footer" src="images/footer/img-instagram.png" alt="">
+                            <span class="nombre-redes">Instagram</span>
+                        </div>
+                        <div id="contenedor-red-individual">
+                            <img class="redes-footer" src="images/footer/img-tik-tok.png" alt="">
+                            <span class="nombre-redes">Tik-Tok</span>
+                        </div>
+                        <div id="contenedor-red-individual">
+                            <img class="redes-footer" src="images/footer/img-whatsapp.png" alt="">
+                            <span class="nombre-redes">Whatsapp</span>
+                        </div>
+                        <div id="contenedor-red-individual">
+                            <img class="redes-footer" src="images/footer/img-x.png" alt="">
+                            <span class="nombre-redes">X</span>
+                        </div>
+                        <div id="contenedor-red-individual">
+                            <img class="redes-footer" src="images/footer/img-facebook.png" alt="facebook">
+                            <span class="nombre-redes">Facebook</span>
+                        </div>
+               
+                    </div>
+                    <!--PARRAFO LEGAL-->
+                    <div id="footer-legal" class="contenedor-columna-individual-footer">
+                        <h2 class="titulo-columna-footer">Legal</h2>
+                        <span class="palabra-footer">Terminos</span>
+                        <span class="palabra-footer">Legales</span>
+                    </div>
+            </div>
+    </footer>
+    <script src="./js/prueba-carrusel.js"></script>
+    <script src="./js/btn-hamburguesa.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/usuario.js"></script>
+</body>
+</html>

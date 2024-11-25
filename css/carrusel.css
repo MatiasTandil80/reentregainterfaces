@@ -1,0 +1,291 @@
+.skew-izq {
+  transform: skewX(55deg); /* Ajusta el ángulo según lo que necesites */
+  transition: transform 1s; /* Suaviza la transición */
+}
+
+
+.skew-der {
+  transform: skewX(-55deg);
+  transition: transform 1s; /* Para el skew */
+}
+
+
+
+#menu-lateral{
+  height: 25vh;
+  width: 15vw;
+}
+
+.carrusel-wrapper {
+  overflow: hidden; /* Oculta las tarjetas que sobresalen */
+  width: 95%; /* O el ancho que necesites */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-bottom: 72px;
+
+
+  border-radius: 20px 20px 0 0; 
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Sombra blanca tipo neón */
+}
+
+.carrusel, .carrusel2, .carrusel3{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    transition: transform 1s ease;
+    width: 100%;
+    border-radius: 20px 20px 0 0; 
+    /*box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Sombra blanca tipo neón */
+}
+
+.card, .card2, .card3, .card4{
+    display:flex ;
+    flex-direction: column;
+    min-width: 28%;
+    position: relative;
+    margin-right: 0.5vw;
+    border-radius: 30px 30px 0 0; 
+
+    border: 5px solid #69396F;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3); /* Sombra blanca tipo neón */
+}
+
+.card4{
+
+  width: 32%;
+  height: auto;
+}
+
+.carrusel4{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 95%;
+  justify-content: space-between;
+}
+
+.base-card{
+height: 4rem  ;
+display: flex;
+flex-direction: row;
+/*justify-content: space-between;*/
+background-color: white;
+align-items: center;
+
+}
+
+.nombre-juego{
+    font-family: 'Nunito', sans-serif; /*Fuente Nunito*/
+    font-size: 22px;
+    color: #69396F;
+    margin-left: 3%;
+
+}
+
+#nombre-carrusel-1, #nombre-carrusel-2, #nombre-carrusel-3, #nombre-carrusel-4{
+  font-size: 14;
+  color: white;
+  margin-bottom: 10px;
+}
+
+#nombre-4-en-linea{
+text-decoration: none;
+font-family: 'Nunito', sans-serif; /*Fuente Nunito*/
+font-size: 2rem;
+color: #69396F;
+}
+
+.imagen-pacman{
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0; 
+
+}
+
+.btn-joystick-grande{
+    background: none; /* Elimina el fondo del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 0; /* Elimina el padding */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    position: absolute;
+    top: 65%; /* 25% de la altura del contenedor */
+    left: 60%; /* 10% del ancho del contenedor */
+}
+
+.img-joystick-grande{
+    height: 5rem;
+
+}
+
+.nombre-precio-carrito-card{
+    display: flex;
+    flex-direction: row;
+    width: 28%;
+    height: 54px;
+    
+    background-color: white;
+}
+
+.imagen{
+    height: 5rem;
+    
+}
+
+.img-card{
+    width: 28%; /*1280 x 638*/
+    height: auto;
+}
+
+#btn-izquierda,#btn-derecha, #btn-izquierda2,#btn-derecha2,
+#btn-izquierda3,#btn-derecha3 {
+    background: none; /* Elimina el fondo del botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 0; /* Elimina el padding */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    position: absolute;
+    z-index: 3;
+
+    
+    
+}
+
+#btn-izquierda, #btn-izquierda2, #btn-izquierda3{
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajusta para que se vea centrado */
+
+}
+
+#btn-derecha, #btn-derecha2, #btn-derecha3{
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajusta para que se vea centrado */
+  right: 0; /* Alinea al borde derecho */
+}
+
+
+
+.joystick-grande{
+    height: 5rem;
+}
+
+
+/****************************ANIMACION DE LAS CARDS*************************************/
+
+.card, .card2, .card3, .card4 {
+  overflow: hidden; /* Evita que el contenido se desborde */
+  position: relative; /* Permite el posicionamiento de la imagen */
+  opacity: 0.8; /* Opacidad inicial */
+  
+}
+
+.card:hover, .card2:hover, .card3:hover, .card4:hover {
+  z-index: 1; /* la card no tapa la base con su nombre */
+}
+
+.base-card{
+  z-index: 0;
+}
+
+.card:hover .imagen-pacman, .card2:hover .imagen-pacman,
+.card3:hover .imagen-pacman, .card4:hover .imagen-pacman{
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al 120% */
+  transition: transform 1s ease; /* Suaviza la transición */
+}
+
+.imagen-pacman {
+  transition: transform 1s ease; /* Suaviza la transición de la imagen */
+}
+
+.card:hover, .card2:hover, .card3:hover, .card4:hover {
+  transform: scale(1.01); /* Aumenta el tamaño de la card al 105% */
+  opacity: 1; /* Recupera la opacidad al hacer hover */
+}
+
+
+
+@keyframes bounce {
+  0% { transform: scale(1.05); }
+  50% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+
+/*************************************************************************************/
+
+#carruseles{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    /*row-gap: 3rem;*/
+    padding: 3rem 1rem 2rem 1rem;
+    background-color: var(--color-primario-900);
+  
+  }
+
+ /* 
+  .carrusel__container{
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .carrusel__container>div:first-child{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+  
+  .carrusel__container .carrusel__buttons{
+    display: flex;
+    gap: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .carrusel__container .carrusel__buttons button{
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: .2rem;
+  }*/
+  
+  /*.carrusel__container .carrusel__buttons>button:first-child{
+    rotate: 180deg;
+  }*/   
+  /*
+  .carrusel__container .carrusel__buttons img{
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  .carrusel__cards{
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+    transition: transform 2s ease;
+    /* transform: translateX(150px); */
+  /*}
+  
+  .card{
+    width: 240px;
+  }
+  
+  
+  #btn_izq_recomnedados:hover,
+  #btn_der_recomnedados:hover,
+  #btn_izq_accion:hover,
+  #btn_der_accion:hover,
+  #btn_izq_terror:hover,
+  #btn_der_terror:hover,
+  #btn_izq_vestir:hover,
+  #btn_der_vestir:hover {
+    background-color: var(--color-primario-500);
+  }
+  
+  
+  
+*/

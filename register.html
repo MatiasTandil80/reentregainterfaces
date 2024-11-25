@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style-register.css">
+    <link rel="stylesheet" href="css/botones-hover/botones-style-1.css">
+    <title>Registro</title>
+</head>
+<body>
+    
+    <div id="contenedor-registro">
+        <h2 id="titulo-login">Registro</h2>
+
+        <div id="contenedor-inputs">
+            <div class="label-input-login">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" class="input-login" type="text">
+            </div>
+
+            <div class="label-input-login">
+                <label for="apellido">Apellido</label>
+                <input id="apellido" class="input-login" type="text">
+            </div>
+
+            <div class="label-input-login">
+                <label for="edad">Edad</label>
+                <input id="edad" class="input-login" type="text">
+            </div>
+
+            <div class="label-input-login">
+                <label for="mail">Email</label>
+                <input id="mail" class="input-login" type="text">
+            </div>
+
+            <div class="label-input-login">
+                <label for="nick-name">Nick Name</label>
+                <input id="nick-name" class="input-login" type="text">
+            </div>
+
+            <div class="label-input-login">
+                <label for="contraseña">Contraseña</label>
+                <input id="contraseña" class="input-login" type="password">
+            </div>
+
+            <div class="label-input-login">
+                <label for="confirm-contraseña">Confirmar Contraseña</label>
+                <input id="confirm-contraseña" class="input-login" type="password">
+            </div>
+
+            <div id="contenedor-no-soy-robot">
+                <div>
+                    <input type="checkbox" id="no-soy-un-robot" required>
+                    <label id="label-no-soy-un-robot">No soy un robot</label>
+                </div>
+                <img src="images/login/icono-captcha.png" alt="">
+            </div>
+        </div>
+
+        <!--<button id="btn-registro" type="submit">Ingresar</button>-->
+        
+        <!--BOTON CON HOVER-->
+        <div class="btn btn-violeta" id="btn-registro" type="submit"><a>Registrarse</a></div>
+    </div>
+    <div id="mensaje">¡Registro exitoso!</div>
+
+    <script src="js/register.js"></script>
+</body>
+</html>
